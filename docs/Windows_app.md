@@ -1,4 +1,4 @@
-##  对 Windows 软件使用频繁的，
+###  对 Windows 软件使用频繁的，
 >  访问下方老牌 Windows 软件下载站。
 
 | |  | |
@@ -7,20 +7,20 @@
 | [系统迷](https://www.xitmi.com/software/pcsoft) | [mefcl](https://www.mefcl.com/category/pcsoft) | [联想应用商店](https://lestore.lenovo.com/cate/soft) |
 | [果核剥壳](https://www.ghxi.com/category/all/pcsoft) | [爱纯净](http://www.aichunjing.com/soft/) | [烈火软件](https://apphot.cc/category/software) |
 
-**52 破解**
+### **吾爱论坛**
 
 [https://www.52pojie.cn/forum-16-1.html](https://www.52pojie.cn/forum-16-1.html)
 
 老牌知名软件破解论坛，每天有大佬更新软件。
 
-**远景论坛**
+### **远景论坛**
 
 [https://bbs.pcbeta.com/forum.php?mod=forumdisplay&fid=521&page=1](https://bbs.pcbeta.com/forum.php?mod=forumdisplay&fid=521&page=1)
 
 老牌知名 Windows 论坛，每天有大佬更新软件。
 
 
-# **Windows 系统下载安装说明**
+##  **Windows 系统下载安装说明**
 
 | |  |
 | ----- | ------- |
@@ -44,7 +44,7 @@
 >>复制并粘贴下面的代码，输入数字 1 或 3，然后按 Enter 键即可自动激活。
 
 
->>>irm https://get.activated.win | iex
+>>> irm https://get.activated.win | iex
 
 
 HWID：进行 Windows 激活。 
@@ -64,6 +64,8 @@ TSforge：适用所有 windows 版本。
 
 ----
 
+## 还原备份
+
 *   [一键还原备份 SGIMINI](https://www.sysceo.com/Software-softwarei-id-253.html)
 >  备份当前系统为.ESD 有问题可快速还原
 
@@ -80,7 +82,7 @@ BIOS 设置 u 盘启动为优先启动，进入 u 盘启动中将之前备份的
 
 * * *
 
-**U 盘中常备**
+### **U 盘中常备**
 
 *   网卡驱动
     
@@ -92,7 +94,7 @@ BIOS 设置 u 盘启动为优先启动，进入 u 盘启动中将之前备份的
 
 日常可以灵活变通，在 U 盘启动制作完毕后，可以存放 **原版系统** + **正常的系统备份**到 U 盘中。
 
-以上操作需要在日常系统没有问题的时候操作，如果仅仅是电脑无法联网，可以查看[手机怎么给电脑联网？](https://iui.su/2953/)
+
 
 如无法开机（非硬件问题）需要重装系统，又没有提前制作 U 盘启动可以找一台能够连接 U 盘的电脑制作 u 盘启动
 
