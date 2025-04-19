@@ -1,8 +1,6 @@
-###  对 Windows 软件使用频繁的，
+##  对 Windows 软件使用频繁的，
 >  访问下方老牌 Windows 软件下载站。
 ----
-
-
 | [puresys](https://www.puresys.net/windows%e8%bd%af%e4%bb%b6) | [分享迷](https://www.fenxm.com/pc) | [423down](https://www.423down.com/zd423) |
 | [系统迷](https://www.xitmi.com/software/pcsoft) | [mefcl](https://www.mefcl.com/category/pcsoft) | [联想应用商店](https://lestore.lenovo.com/cate/soft) |
 | [果核剥壳](https://www.ghxi.com/category/all/pcsoft) | [爱纯净](http://www.aichunjing.com/soft/) | [烈火软件](https://apphot.cc/category/software) |
@@ -20,7 +18,7 @@
 老牌知名 Windows 论坛，每天有大佬更新软件。
 
 
-## **Windows 系统下载安装说明**
+# **Windows 系统下载安装说明**
 
 | [MSDN 原版系统](https://uupdump.net/) | 快速获取原版 Windows 系统镜像 |
 | [Windows ltsc](https://massgrave.dev/windows_ltsc_links) | 快速获取原版 Windows ltsc 企业版 |
@@ -38,14 +36,16 @@
 
 >  收集了多种 Windows/Office 激活方式，任选其一即可。
 
-打开 PowerShell（不是 CMD）。请右键单击 Windows 开始菜单并选择**终端管理员**。  
-复制并粘贴下面的代码，输入数字 1 或 3，然后按 Enter 键即可自动激活。
+>>打开 PowerShell（不是 CMD）。请右键单击 Windows 开始菜单并选择**终端管理员**。  
+>>复制并粘贴下面的代码，输入数字 1 或 3，然后按 Enter 键即可自动激活。
 
 
-irm https://get.activated.win | iex
+>>>irm https://get.activated.win | iex
 
 
-HWID：进行 Windows 激活。 Ohook ：给 Office 激活。TSforge：适用所有 windows 版本。
+HWID：进行 Windows 激活。 
+Ohook ：给 Office 激活。
+TSforge：适用所有 windows 版本。
 
 [https://kms.cx](https://kms.cx/)
 
@@ -60,7 +60,8 @@ HWID：进行 Windows 激活。 Ohook ：给 Office 激活。TSforge：适用所
 
 ----
 
-*   [一键还原备份 SGIMINI](https://www.sysceo.com/Software-softwarei-id-253.html) 备份当前系统为.ESD 有问题可快速还原
+*   [一键还原备份 SGIMINI](https://www.sysceo.com/Software-softwarei-id-253.html)
+>  备份当前系统为.ESD 有问题可快速还原
 
 正常的系统备份后可将备份拷贝至 u 盘或**网盘**中以备不时之需。
 
