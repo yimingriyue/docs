@@ -7,11 +7,14 @@
 | [系统迷](https://www.xitmi.com/software/pcsoft) | [mefcl](https://www.mefcl.com/category/pcsoft) | [联想应用商店](https://lestore.lenovo.com/cate/soft) |
 | [果核剥壳](https://www.ghxi.com/category/all/pcsoft) | [爱纯净](http://www.aichunjing.com/soft/) | [烈火软件](https://apphot.cc/category/software) |
 
-%%%淡蓝色
+[bg:淡蓝色] 这是一个有淡蓝色背景的段落。
+
+[bg:浅绿色] 这是另一个有浅绿色背景的段落。
+
 ### **吾爱论坛**
 [https://www.52pojie.cn/forum-16-1.html](https://www.52pojie.cn/forum-16-1.html)
 老牌知名软件破解论坛，每天有大佬更新软件。
-%%%淡蓝色
+
 
 ### **远景论坛**
 
