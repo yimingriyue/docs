@@ -1,6 +1,8 @@
 ##  对 Windows 软件使用频繁的，
 >  访问下方老牌 Windows 软件下载站。
-----
+
+| |  | |
+| ----- | ------- | ------ |
 | [puresys](https://www.puresys.net/windows%e8%bd%af%e4%bb%b6) | [分享迷](https://www.fenxm.com/pc) | [423down](https://www.423down.com/zd423) |
 | [系统迷](https://www.xitmi.com/software/pcsoft) | [mefcl](https://www.mefcl.com/category/pcsoft) | [联想应用商店](https://lestore.lenovo.com/cate/soft) |
 | [果核剥壳](https://www.ghxi.com/category/all/pcsoft) | [爱纯净](http://www.aichunjing.com/soft/) | [烈火软件](https://apphot.cc/category/software) |
@@ -20,6 +22,8 @@
 
 # **Windows 系统下载安装说明**
 
+| |  |
+| ----- | ------- |
 | [MSDN 原版系统](https://uupdump.net/) | 快速获取原版 Windows 系统镜像 |
 | [Windows ltsc](https://massgrave.dev/windows_ltsc_links) | 快速获取原版 Windows ltsc 企业版 |
 | [微软系统下载](https://www.microsoft.com/zh-cn/software-download) | 微软官方 microsoft.com 提供 |
