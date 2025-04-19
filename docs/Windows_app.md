@@ -35,8 +35,10 @@
 原版系统镜像安装十分简单，解压.iso 文件，运行里面的.exe 按照步骤即可快速安装，系统成功安装后，可以安装下方两个工具。
 
 ----
-<details>
-  <summary>  <span style="color:blue">  Windows/Office 永久激活工具 </span>系统安装后快速激活</summary>
+
+<details style="border: 1px solid #a0c4ff; background-color: #f0f8ff; border-radius: 5px; padding: 10px; margin: 10px 0;">
+  <summary>  <span  style="cursor: pointer; outline: none;color:blue">  Windows/Office 永久激活工具 </span>系统安装后快速激活</summary>
+  <div style="padding: 10px; background-color: #f0f8ff; border-radius: 0 0 5px 5px; margin-top: 8px;">
 
 >  收集了多种 Windows/Office 激活方式，任选其一即可。
 
@@ -60,6 +62,7 @@ TSforge：适用所有 windows 版本。
 [密码: 9xum](https://wwi.lanzoup.com/b05gumbe)
 
 下载地址由 [HEU\_KMS\_Activator](https://github.com/zbezj/HEU_KMS_Activator/releases) 提供，如有压缩密码为：**HEU168**
+  </div>
 </details>
 
 ----
