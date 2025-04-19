@@ -34,7 +34,7 @@
 
 原版系统镜像安装十分简单，解压.iso 文件，运行里面的.exe 按照步骤即可快速安装，系统成功安装后，可以安装下方两个工具。
 
-----
+
 
 <details style="border: 1px solid #a0c4ff; background-color: #f0f8ff; border-radius: 5px; padding: 10px; margin: 10px 0;">
   <summary>  <span  style="cursor: pointer; outline: none;color:blue">  Windows/Office 永久激活工具 </span>系统安装后快速激活</summary>
@@ -65,7 +65,7 @@ TSforge：适用所有 windows 版本。
   </div>
 </details>
 
-----
+
 
 ## 还原备份
 
