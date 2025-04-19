@@ -42,12 +42,12 @@
 
 >  收集了多种 Windows/Office 激活方式，任选其一即可。
 
->>打开 PowerShell（不是 CMD）。请右键单击 Windows 开始菜单并选择**终端管理员**。  
->>复制并粘贴下面的代码，输入数字 1 或 3，然后按 Enter 键即可自动激活。
+打开 PowerShell（不是 CMD）。请右键单击 Windows 开始菜单并选择**终端管理员**。  
+>复制并粘贴下面的代码，输入数字 1 或 3，然后按 Enter 键即可自动激活。
 
-
->>> irm https://get.activated.win | iex
-
+```
+ irm https://get.activated.win | iex
+```
 
 HWID：进行 Windows 激活。 
 Ohook ：给 Office 激活。
