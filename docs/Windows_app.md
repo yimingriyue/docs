@@ -12,14 +12,9 @@
 >  ### **吾爱论坛**
 >  [https://www.52pojie.cn/forum-16-1.html](https://www.52pojie.cn/forum-16-1.html)
 >  老牌知名软件破解论坛，每天有大佬更新软件。
-
-
-
-### **远景论坛**
-
-[https://bbs.pcbeta.com/forum.php?mod=forumdisplay&fid=521&page=1](https://bbs.pcbeta.com/forum.php?mod=forumdisplay&fid=521&page=1)
-
-老牌知名 Windows 论坛，每天有大佬更新软件。
+>> ### **远景论坛**
+>>[https://bbs.pcbeta.com/forum.php?mod=forumdisplay&fid=521&page=1](https://bbs.pcbeta.com/forum.php?mod=forumdisplay&fid=521&page=1)
+>>老牌知名 Windows 论坛，每天有大佬更新软件。
 
 
 ##  **Windows 系统下载安装说明**
