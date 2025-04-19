@@ -8,12 +8,12 @@
 | [果核剥壳](https://www.ghxi.com/category/all/pcsoft) | [爱纯净](http://www.aichunjing.com/soft/) | [烈火软件](https://apphot.cc/category/software) |
 
 
-::: bg 淡蓝色
-### **吾爱论坛**
-[https://www.52pojie.cn/forum-16-1.html](https://www.52pojie.cn/forum-16-1.html)
-老牌知名软件破解论坛，每天有大佬更新软件。
 
-:::
+>  ### **吾爱论坛**
+>  [https://www.52pojie.cn/forum-16-1.html](https://www.52pojie.cn/forum-16-1.html)
+>  老牌知名软件破解论坛，每天有大佬更新软件。
+
+
 
 ### **远景论坛**
 
