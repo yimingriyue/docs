@@ -54,7 +54,7 @@
 <script>
 const MarkdownViewer = (function() {
     const GITHUB_API_URL = 'https://api.github.com/repos/yimingriyue/docs/contents/docs';
-    const WEEKLY_API_URL = 'https://api.github.com/repos/yimingriyue/docs/contents/zhaji';
+    const QINGYUN_API_URL = 'https://api.github.com/repos/yimingriyue/qingyunjie/contents/qingyun';
     const SCROLL_DEBOUNCE_TIME = 100;
     const FETCH_TIMEOUT = 5000;
 
@@ -71,9 +71,9 @@ const MarkdownViewer = (function() {
                 apiUrl: GITHUB_API_URL,
                 isOpen: true
             },
-            'weekly': {
+            'zhaji': {
                 title: '青云阶',
-                apiUrl: WEEKLY_API_URL,
+                apiUrl: QINGYUN_API_URL,
                 isOpen: false
             }
         }
