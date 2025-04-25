@@ -32,16 +32,38 @@
 
 ##  折叠语法
 
-```markdown
+```
 <details>
   <summary>点我展开</summary>
   Markdown默认折叠语法
 </details>
 ```
-### 效果
+#### 效果
 <details>
   <summary>点我展开</summary>
-  Markdown默认折叠语法，Vitepress可以使用容器折叠语法，更加美观
+  Markdown默认折叠语法
+</details>
+
+
+- 增加淡蓝色的框架背景
+```
+<details style="border: 1px solid #a0c4ff; background-color: #f0f8ff; border-radius: 5px; padding: 10px; margin: 10px 0;">
+  <summary>  <span  style="cursor: pointer; outline: none;color:blue">  点我展开 </span>说明</summary>
+  <div style="padding: 10px; background-color: #f0f8ff; border-radius: 0 0 5px 5px; margin-top: 8px;">
+  
+  html折叠语法，此处为正文内容
+
+ </div>
+</details>
+```
+#### 效果
+<details style="border: 1px solid #a0c4ff; background-color: #f0f8ff; border-radius: 5px; padding: 10px; margin: 10px 0;">
+  <summary>  <span  style="cursor: pointer; outline: none;color:blue">  点我展开 </span>说明</summary>
+  <div style="padding: 10px; background-color: #f0f8ff; border-radius: 0 0 5px 5px; margin-top: 8px;">
+  
+  html折叠语法，此处为正文内容
+
+ </div>
 </details>
 
 ## 图片
