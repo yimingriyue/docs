@@ -1,0 +1,375 @@
+/* style.img.css - 已适配暗黑模式 */
+
+:root {
+    --bg-color: #f8f4e8;
+    --text-color: #333;
+    --nav-bg: #e8e4d8;
+    --border-color: #d0ccc0;
+}
+
+body.dark-mode {
+    --bg-color: #121212;
+    --text-color: #e0e0e0;
+    --nav-bg: #1e1e1e;
+    --border-color: #333;
+}
+.content {
+  position: relative;
+  padding: 0 15px;
+}
+
+.content::before {
+  content: "[";
+  position: absolute;
+  left: 0;
+  transform: rotate(90deg);
+  color: var(--text-color);
+}
+
+.content::after {
+  content: "]";
+  position: absolute;
+  right: 0;
+  transform: rotate(-90deg);
+  color: var(--text-color);
+}
+
+:root {
+    --base-font-size: 30px;
+    --nav-height: 35px;
+    --bottom-nav-height: 30px;
+    /* 默认浅色模式颜色 */
+    --bg-color: #f5f0e1;
+    --text-color: #333;
+    --nav-bg: #e8d8b5;
+    --border-color: #d1b38b;
+    --scrollbar-thumb: #d1b38b;
+    --scrollbar-thumb-hover: #b89a6c;
+    --button-bg: #8b6b3d;
+    --button-hover: #6d4f2b;
+    --button-active: #b89a6c;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "宋体","SimSun", serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    overflow: hidden;
+    height: 100vh;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    position: relative;
+}
+
+.book-content {
+    font-size: var(--base-font-size);
+    flex: 1;
+    overflow-y: hidden;
+    overflow-x: auto;
+    padding: 10px 20px 30px;
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    line-height: 2.5em;
+    letter-spacing: 0.2em;
+    column-gap: 40px;
+    column-fill: auto;
+    height: calc(100vh - var(--nav-height) - var(--bottom-nav-height));
+    column-width: auto;
+    text-align: justify;
+    hyphens: auto;
+    scroll-behavior: smooth;
+    background-color: var(--bg-color);
+    -webkit-overflow-scrolling: touch;
+    user-select: none;
+    transition: background-color 0.3s;
+}
+
+.book-content p {
+    margin: 0;
+    text-indent: 2em;
+    padding: 0 10px;
+    color: var(--text-color);
+}
+
+.book-content p:first-child {
+    text-indent: 0;
+}
+
+.book-content h2 {
+    margin: 0;
+    padding: 0 10px;
+    font-size: 2em;
+    text-indent: 0;
+    font-weight: bold;
+    color: var(--text-color);
+}
+
+.book-content h3 {
+    margin: 0;
+    padding: 0 10px;
+    font-size: 1.5em;
+    text-indent: 0;
+    font-weight: bold;
+    color: var(--text-color);
+}
+
+.book-content .quote {
+    margin: 1em 0;
+    padding: 0 15px;
+    border-left: 2px solid var(--border-color);
+    font-style: italic;
+    color: var(--text-color);
+}
+
+.book-content .trigram {
+    font-size: 1.8em;
+    vertical-align: middle;
+    color: var(--text-color);
+}
+
+.book-content .image-container {
+    margin: 1em 0;
+    padding: 0 15px;
+    text-align: center;
+    writing-mode: horizontal-tb;
+}
+
+/* 图片通用样式 */
+img {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    object-position: center;
+    display: block;
+    margin: 0.5rem auto;
+}
+
+/* .image-container中的图片样式 */
+.book-content .image-container img {
+    max-width: 100% !important;
+    max-height: 100% !important;
+    margin: 0 auto;
+}
+
+.book-content .image-container p {
+    text-align: center;
+    writing-mode: horizontal-tb;
+    text-indent: 0;
+    margin-top: 0.5em;
+    font-size: 0.9em;
+    color: var(--text-color);
+}
+
+.nav-container {
+    height: var(--nav-height);
+    background-color: var(--nav-bg);
+    border-top: 1px solid var(--border-color);
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+    position: relative;
+    line-height: var(--nav-height);
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.nav-item {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 15px;
+    margin: 0 5px;
+    background-color: var(--button-bg);
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-size: 1.1em;
+    min-width: 80px;
+    box-shadow: 0 2px 3px rgba(0,0,0,0.1);
+}
+
+.nav-item:hover {
+    background-color: var(--button-hover);
+}
+
+.nav-item.active {
+    background-color: var(--button-active);
+}
+
+.bottom-nav {
+    height: var(--bottom-nav-height);
+    background-color: var(--nav-bg);
+    border-top: 1px solid var(--border-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.home-button {
+    padding: 5px 20px;
+    background-color: var(--button-bg);
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-size: 1em;
+    text-align: center;
+    box-shadow: 0 2px 3px rgba(0,0,0,0.1);
+}
+
+.home-button:hover {
+    background-color: var(--button-hover);
+}
+
+.auto-scroll-btn {
+    position: fixed;
+    bottom: 70px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: var(--button-bg);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 100;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    font-size: 20px;
+    user-select: none;
+    transition: all 0.3s;
+}
+
+.auto-scroll-btn:hover {
+    background-color: var(--button-hover);
+}
+
+.auto-scroll-btn.active {
+    background-color: var(--button-active);
+    transform: scale(0.95);
+}
+
+.mobile-tip {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    z-index: 1000;
+    display: none;
+    max-width: 80%;
+    text-align: center;
+    font-size: 18px;
+    pointer-events: none;
+}
+
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg-color);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--scrollbar-thumb);
+    border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--scrollbar-thumb-hover);
+}
+
+/* 移动端样式 */
+@media (max-width: 768px) {
+    img {
+        max-width: 100% !important;
+        max-height: 86vh !important;
+        width: auto !important;
+        height: auto !important;
+    }
+    
+    .book-content .image-container img {
+        max-width: 100% !important;
+        max-height: 100% !important;
+    }
+    
+    .book-content .image-container {
+        padding: 0;
+        margin: 0.5em 0;
+    }
+    
+    :root {
+        --base-font-size: 22px;
+        --bottom-nav-height: 23px;
+    }
+    
+    .book-content {
+        column-gap: 20px;
+        letter-spacing: 0.3em;
+        line-height: 2em;
+    }
+    
+    .nav-container {
+        height: 23px;
+    }
+    
+    .nav-item {
+        padding: 3px 10px;
+        font-size: 0.9em;
+        min-width: 60px;
+    }
+    
+    .home-button {
+        padding: 4px 15px;
+        font-size: 0.7em;
+    }
+    
+    .auto-scroll-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 16px;
+        bottom: 60px;
+        right: 15px;
+    }
+    
+    .mobile-tip {
+        display: block;
+        animation: fadeOut 3s forwards;
+    }
+    
+    @keyframes fadeOut {
+        0% { opacity: 1; }
+        70% { opacity: 1; }
+        100% { opacity: 0; display: none; }
+    }
+}
+
+/* 垂直破折号样式 */
+.vertical-dash {
+    font-size: 1.5em;
+    color: var(--text-color);
+}

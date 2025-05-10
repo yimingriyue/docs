@@ -1,0 +1,338 @@
+/* style.css */
+
+@font-face {
+    font-family: 'LXGWWenKaiMonoScreen';
+    src: url('../fonts/LXGWWenKaiLite-Medium.woff2') format('woff2');
+    font-display: swap;
+}
+
+.content {
+  position: relative;
+  padding: 0 15px;
+}
+
+.content::before {
+  content: "[";
+  position: absolute;
+  left: 0;
+  transform: rotate(90deg);
+}
+
+.content::after {
+  content: "]";
+  position: absolute;
+  right: 0;
+  transform: rotate(-90deg);
+}
+:root {
+    --base-font-size: 30px;
+    --nav-height: 35px;
+    --bottom-nav-height: 30px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "LXGWWenKaiMonoScreen", "SimSun","宋体", serif;
+    background-color: #f5f0e1;
+    color: #333;
+    overflow: hidden;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    position: relative;
+}
+
+.book-content {
+    font-size: var(--base-font-size);
+    flex: 1;
+    overflow-y: hidden;
+    overflow-x: auto;
+    padding: 10px 20px 30px;
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    line-height: 2.5em;
+    letter-spacing: 0.2em;
+    column-gap: 40px;
+    column-fill: auto;
+    height: calc(100vh - var(--nav-height) - var(--bottom-nav-height));
+    column-width: auto;
+    text-align: justify;
+    hyphens: auto;
+    scroll-behavior: smooth;
+    background-color: #f5f0e1;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    user-select: none;
+}
+
+.book-content p {
+    margin: 0;
+    text-indent: 2em;
+    padding: 0 10px;
+}
+
+.book-content p:first-child {
+    text-indent: 0;
+}
+
+.book-content h2 {
+    margin: 0;
+    padding: 0 10px;
+    font-size: 2em;
+    text-indent: 0;
+    font-weight: bold;
+}
+
+.book-content h3 {
+    margin: 0;
+    padding: 0 10px;
+    font-size: 1.5em;
+    text-indent: 0;
+    font-weight: bold;
+}
+
+.book-content .quote {
+    margin: 1em 0;
+    padding: 0 15px;
+    border-left: 2px solid #d1b38b;
+    font-style: italic;
+}
+
+.book-content .trigram {
+    font-size: 1.8em;
+    vertical-align: middle;
+}
+
+.book-content .image-container {
+    margin: 1em 0;
+    padding: 0 15px;
+    text-align: center;
+    writing-mode: horizontal-tb;
+}
+
+img {
+  max-width: 100%;
+  max-height: 90vh;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  object-position: center;
+  display: block;
+  margin: 0.5rem auto;
+}
+
+/* 覆盖原有.image-container的冲突规则 */
+.book-content .image-container img {
+  max-width: 100% !important;    /* 强制覆盖旧规则 */
+  max-height: none;              /* 允许高度自适应 */
+  margin: 0 auto;                /* 重置边距 */
+}
+
+.book-content .image-container p {
+    text-align: center;
+    writing-mode: horizontal-tb;
+    text-indent: 0;
+    margin-top: 0.5em;
+    font-size: 0.9em;
+}
+
+.nav-container {
+    height: var(--nav-height);
+    background-color: #e8d8b5;
+    border-top: 1px solid #d1b38b;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+    position: relative;
+    line-height: var(--nav-height);
+}
+
+.nav-item {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 15px;
+    margin: 0 5px;
+    background-color: #d1b38b;
+    color: #333;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-size: 1.1em;
+    min-width: 80px;
+    box-shadow: 0 2px 3px rgba(0,0,0,0.1);
+}
+
+.nav-item:hover {
+    background-color: #b89a6c;
+    color: white;
+}
+
+.nav-item.active {
+    background-color: #8b6b3d;
+    color: white;
+}
+
+.bottom-nav {
+    height: var(--bottom-nav-height);
+    background-color: #e8d8b5;
+    border-top: 1px solid #d1b38b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.home-button {
+    padding: 5px 20px;
+    background-color: #8b6b3d;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-size: 1em;
+    text-align: center;
+    box-shadow: 0 2px 3px rgba(0,0,0,0.1);
+}
+
+.home-button:hover {
+    background-color: #6d4f2b;
+}
+
+.auto-scroll-btn {
+    position: fixed;
+    bottom: 70px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: #8b6b3d;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 100;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    font-size: 20px;
+    user-select: none;
+}
+
+.auto-scroll-btn:hover {
+    background-color: #6d4f2b;
+}
+
+.auto-scroll-btn.active {
+    background-color: #b89a6c;
+    transform: scale(0.55); /* 点击时轻微缩小 */
+
+}
+
+.mobile-tip {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    z-index: 1000;
+    display: none;
+    max-width: 80%;
+    text-align: center;
+    font-size: 18px;
+    pointer-events: none;
+}
+
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f5f0e1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #d1b38b;
+    border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #b89a6c;
+}
+
+@media (max-width: 768px) {
+      img {
+    max-width: 98vw;
+    max-height: 85vh;
+  }
+  
+  .book-content .image-container {
+    padding: 0 5px;  /* 移动端减少侧边间距 */
+  }
+    :root {
+        --base-font-size: 22px;
+        --bottom-nav-height: 23px;
+    }
+    
+    .book-content {
+        column-gap: 20px;
+        letter-spacing: 0.3em;
+        line-height: 2em;
+    }
+    
+    .nav-container {
+        height: 23px;
+    }
+    
+    .nav-item {
+        padding: 3px 10px;
+        font-size: 0.9em;
+        min-width: 60px;
+    }
+    
+    .home-button {
+        padding: 4px 15px;
+        font-size: 0.7em;
+    }
+    
+    .auto-scroll-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 16px;
+        bottom: 60px;
+        right: 15px;
+    }
+    
+    .mobile-tip {
+        display: block;
+        animation: fadeOut 3s forwards;
+    }
+    
+    @keyframes fadeOut {
+        0% { opacity: 1; }
+        70% { opacity: 1; }
+        100% { opacity: 0; display: none; }
+    }
+}
+
+      /*    <span class="vertical-dash">¦¦</span> 调整|大小作为破折号 ¦¦*/
+
+.vertical-dash {
+    font-size: 1.5em;
+    
+}

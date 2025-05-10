@@ -1,0 +1,6 @@
+/* 字体定义文件 - 延迟加载 */
+/* assets/css/font.css */
+body {
+    font-family: "LXGW WenKai Mono GB", "SimSun", serif;
+    font-weight: normal;
+}

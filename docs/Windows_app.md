@@ -1,5 +1,30 @@
-###  对 Windows 软件使用频繁的，
+
+
+<details style="border: 1px solid #a0c4ff; background-color: #f0f8ff; border-radius: 5px; padding: 10px; margin: 10px 0;display: inline-block;">
+  <summary>  <span  style="cursor: pointer; outline: none;color:blue">  点开查看下载步骤 </span>说明</summary>
+  <div style="padding: 10px; background-color: #f0f8ff; border-radius: 0 0 5px 5px; margin-top: 8px;">
+
+### [联想应用商店](https://lestore.lenovo.com/cate/soft) 
+> 联想官方推出的安全、便捷的一站式应用下载平台。
+> 汇聚海量正版软件，涵盖办公、娱乐、学习、安全等多领域，
+> 严格审核保障应用安全，杜绝恶意软件。
+>> https://lestore.lenovo.com/cate/soft
+
+> 打开浏览器访问官方网址
+>>点击直接下载
+>>> 或，搜索PC应用，按回车
+>>>  点普通下载
+>>> 浏览器的下载界面，在右上角里。
+
+![联想应用商店](Markdown/resources/联想应用商店.webp)
+ </div>
+</details>
+
+
+###  如果对 Windows 软件使用频繁，
 >  访问下方老牌 Windows 软件下载站。
+
+
 
 | |  | |
 | ----- | ------- | ------ |
@@ -15,6 +40,25 @@
 >> ### **远景论坛**
 >>[https://bbs.pcbeta.com/forum.php?mod=forumdisplay&fid=521&page=1](https://bbs.pcbeta.com/forum.php?mod=forumdisplay&fid=521&page=1)
 >>老牌知名 Windows 论坛，每天有大佬更新软件。
+
+
+
+| |  |
+| ----- | ------- |
+| **搜索：** |  [Everything](https://www.voidtools.com/zh-cn/)(本地搜索文件名神器)、[Listary](https://www.listary.com/)（[快速切换](https://help.listary.com/zh-Hans/quick-switch)很好用）| 
+| **下载：** |  [NDM](https://www.neatdownloadmanager.com/) （免费版的IDM）| 
+| **截图：** |  [Snipaste](https://zh.snipaste.com/)、[PixPin](https://pixpin.cn/)（相比前者功能更多、支持截图/贴图/长截图/文字识别/标注）| 
+| **剪贴板管理：**|   [Ditto](https://github.com/sabrogden/Ditto)| 
+|**Markdown:**| [Typora](https://typora.io/)| 
+| **包管理器:** | [Scoop](https://scoop.sh/)（类似mac brew，一键安装，自动配置环境变量）| 
+| **媒体播放：**  | [PotPlayer](https://potplayer.daum.net/?lang=zh_CN)| （无广告，支持多种视频格式，支持查看视频参数）| 
+| **桌面录像：**  | [OBS](https://obsproject.com/zh-cn)（开源免费且功能强大，桌面教程、游戏录像首选）| 
+| **密码管理：** |  [Bitwarden](https://bitwarden.com/)（多终端同步，自动填密码）| 
+| **远程控制：**  | [RustDesk](https://rustdesk.com/zh-cn/)（开源免费，可自用，不可随意让他人远程自己的电脑）| 
+| **多源翻译：**|  [STranslate](https://stranslate.zggsong.com/) （多渠道划词翻译）| 
+| **解压缩：**  | [7-Zip](https://www.7-zip.org/)、[Bandizip](https://www.bandisoft.com/bandizip/)、【[智能解压](https://www.bandisoft.com/bandizip/help/auto_dest/)很好用】（6.25版本，最后一个原生免费版本，下载后安装没有任何限制，目前最新7版本以上，自带广告需付费激活）| 
+
+
 
 
 ##  **Windows 系统下载安装说明**
