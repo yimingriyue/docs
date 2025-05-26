@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>GitHub音乐播放器</title>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; }
+        #playlist { list-style: none; padding: 0; }
+        #playlist li { padding: 10px; border-bottom: 1px solid #eee; cursor: pointer; }
+        #playlist li:hover { background-color: #f5f5f5; }
+        #player { width: 100%; margin: 20px 0; }
+        .playing { background-color: #e0f7fa; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <h1>GitHub音乐播放器</h1>
+    <audio id="player" controls></audio>
+    <ul id="playlist">
+        <!-- 音乐列表将在这里动态生成 -->
+    </ul>
+
+    <script>
+        // 音乐文件列表 - 替换为你的实际文件名
+        const songs = [
+            { title: "歌曲1", file: "song1.mp3" },
+            { title: "歌曲2", file: "song2.mp3" },
+            // 添加更多歌曲...
+        ];
+
+        const player = document.getElementById('player');
+        const playlist = document.getElementById('playlist');
+        
+        // 生成播放列表
+        songs.forEach((song, index) => {
+            const li = document.createElement('li');
+            li.textContent = song.title;
+            li.onclick = () => playSong(index);
+            playlist.appendChild(li);
+        });
+
+        // 播放歌曲
+        function playSong(index) {
+            // 使用GitHub raw文件链接
+            const rawUrl = `https://cdn.jsdelivr.net/gh/yimingriyue/docs@main/song/office/${song.file}`;
+            player.src = rawUrl;
+            player.play();
+            
+            // 更新当前播放样式
+            const items = playlist.getElementsByTagName('li');
+            for (let i = 0; i < items.length; i++) {
+                items[i].classList.remove('playing');
+            }
+            items[index].classList.add('playing');
+        }
+        
+        // 自动播放下一首
+        player.addEventListener('ended', () => {
+            const currentIndex = [...playlist.children].findIndex(
+                li => li.classList.contains('playing')
+            );
+            const nextIndex = (currentIndex + 1) % songs.length;
+            playSong(nextIndex);
+        });
+    </script>
+</body>
+</html>
