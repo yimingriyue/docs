@@ -9,39 +9,72 @@
         #playlist li:hover { background-color: #f5f5f5; }
         #player { width: 100%; margin: 20px 0; }
         .playing { background-color: #e0f7fa; font-weight: bold; }
+        #loading { text-align: center; padding: 20px; }
     </style>
 </head>
 <body>
     <h1>GitHub音乐播放器</h1>
     <audio id="player" controls></audio>
+    <div id="loading">加载音乐列表中...</div>
     <ul id="playlist">
         <!-- 音乐列表将在这里动态生成 -->
     </ul>
 
     <script>
-        // 音乐文件列表 - 替换为你的实际文件名
-        const songs = [
-            { title: "歌曲1", file: "song1.mp3" },
-            { title: "歌曲2", file: "song2.mp3" },
-            // 添加更多歌曲...
-        ];
-
         const player = document.getElementById('player');
         const playlist = document.getElementById('playlist');
-        
+        const loading = document.getElementById('loading');
+        let songs = [];
+
+        // 从GitHub API获取音乐文件列表
+        async function fetchSongList() {
+            try {
+                // 替换为你的GitHub用户名、仓库名和路径
+                const apiUrl = 'https://api.github.com/repos/yimingriyue/docs/contents/song/office';
+                
+                const response = await fetch(apiUrl);
+                if (!response.ok) {
+                    throw new Error('无法获取音乐列表');
+                }
+                
+                const files = await response.json();
+                
+                // 过滤出MP3文件
+                songs = files
+                    .filter(file => file.name.endsWith('.mp3'))
+                    .map(file => ({
+                        title: file.name.replace('.mp3', ''),
+                        file: file.name,
+                        url: file.download_url
+                    }));
+                
+                renderPlaylist();
+                loading.style.display = 'none';
+                
+                // 如果有歌曲，自动播放第一首
+                if (songs.length > 0) {
+                    playSong(0);
+                }
+            } catch (error) {
+                loading.textContent = '加载失败: ' + error.message;
+                console.error('加载音乐列表失败:', error);
+            }
+        }
+
         // 生成播放列表
-        songs.forEach((song, index) => {
-            const li = document.createElement('li');
-            li.textContent = song.title;
-            li.onclick = () => playSong(index);
-            playlist.appendChild(li);
-        });
+        function renderPlaylist() {
+            playlist.innerHTML = '';
+            songs.forEach((song, index) => {
+                const li = document.createElement('li');
+                li.textContent = song.title;
+                li.onclick = () => playSong(index);
+                playlist.appendChild(li);
+            });
+        }
 
         // 播放歌曲
         function playSong(index) {
-            // 使用GitHub raw文件链接
-            const rawUrl = `https://cdn.jsdelivr.net/gh/yimingriyue/docs@main/song/office/${song.file}`;
-            player.src = rawUrl;
+            player.src = songs[index].url;
             player.play();
             
             // 更新当前播放样式
@@ -57,9 +90,14 @@
             const currentIndex = [...playlist.children].findIndex(
                 li => li.classList.contains('playing')
             );
-            const nextIndex = (currentIndex + 1) % songs.length;
-            playSong(nextIndex);
+            if (currentIndex !== -1) {
+                const nextIndex = (currentIndex + 1) % songs.length;
+                playSong(nextIndex);
+            }
         });
+
+        // 页面加载时获取音乐列表
+        fetchSongList();
     </script>
 </body>
 </html>
