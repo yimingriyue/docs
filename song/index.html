@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>GitHub音乐播放器</title>
+    <title>音乐播放器</title>
     <style>
         body { font-family: Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; }
         #playlist { list-style: none; padding: 0; }
@@ -10,12 +10,14 @@
         #player { width: 100%; margin: 20px 0; }
         .playing { background-color: #e0f7fa; font-weight: bold; }
         #loading { text-align: center; padding: 20px; }
+        #error { color: red; text-align: center; padding: 20px; display: none; }
     </style>
 </head>
 <body>
-    <h1>GitHub音乐播放器</h1>
+    <h1>音乐播放器</h1>
     <audio id="player" controls></audio>
     <div id="loading">加载音乐列表中...</div>
+    <div id="error"></div>
     <ul id="playlist">
         <!-- 音乐列表将在这里动态生成 -->
     </ul>
@@ -24,40 +26,63 @@
         const player = document.getElementById('player');
         const playlist = document.getElementById('playlist');
         const loading = document.getElementById('loading');
+        const errorDiv = document.getElementById('error');
         let songs = [];
 
         // 从GitHub API获取音乐文件列表
         async function fetchSongList() {
             try {
-                // 替换为你的GitHub用户名、仓库名和路径
-                const apiUrl = 'https://api.github.com/repos/yimingriyue/docs/contents/song/office';
-                
+                const cacheKey = 'github-music-cache';
+                const cacheExpiry = 30 * 60 * 1000; // 30分钟缓存
+
+                // 尝试从缓存读取
+                const cachedData = localStorage.getItem(cacheKey);
+                if (cachedData) {
+                    const { data, timestamp } = JSON.parse(cachedData);
+                    if (Date.now() - timestamp < cacheExpiry) {
+                        songs = data;
+                        renderPlaylist();
+                        loading.style.display = 'none';
+                        return;
+                    }
+                }
+
+                // 从 GitHub API 请求
+                const apiUrl = 'https://api.github.com/repos/yimingriyue/docs/contents/song/office?per_page=100';
                 const response = await fetch(apiUrl);
+                
                 if (!response.ok) {
-                    throw new Error('无法获取音乐列表');
+                    throw new Error(`GitHub API请求失败: ${response.status}`);
                 }
                 
                 const files = await response.json();
-                
-                // 过滤出MP3文件
+
+                // 处理数据并缓存
                 songs = files
-                    .filter(file => file.name.endsWith('.mp3'))
+                    .filter(file => file.name.toLowerCase().endsWith('.mp3'))
                     .map(file => ({
-                        title: file.name.replace('.mp3', ''),
+                        title: file.name.replace('.mp3', '').replace(/_/g, ' '),
                         file: file.name,
-                        url: file.download_url
+                        url: `https://cdn.jsdelivr.net/gh/yimingriyue/docs@main/song/office/${encodeURIComponent(file.name)}`
                     }));
-                
+
+                localStorage.setItem(cacheKey, JSON.stringify({
+                    data: songs,
+                    timestamp: Date.now()
+                }));
+
                 renderPlaylist();
                 loading.style.display = 'none';
                 
-                // 如果有歌曲，自动播放第一首
+                // 自动播放第一首
                 if (songs.length > 0) {
                     playSong(0);
                 }
             } catch (error) {
-                loading.textContent = '加载失败: ' + error.message;
                 console.error('加载音乐列表失败:', error);
+                loading.style.display = 'none';
+                errorDiv.style.display = 'block';
+                errorDiv.textContent = `加载失败: ${error.message}`;
             }
         }
 
